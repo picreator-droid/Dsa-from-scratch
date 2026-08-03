@@ -3,9 +3,9 @@ class Solution {
         int countConsecutive = 0;
         int count = 0;
 
-        for(int i=0; i<nums.length; i++){
+        for(int num : nums){
 
-            if(nums[i] == 1){
+            if(num == 1){
                 count++;
                 countConsecutive = Math.max(count, countConsecutive);
             }
