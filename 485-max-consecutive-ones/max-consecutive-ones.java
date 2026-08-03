@@ -7,12 +7,15 @@ class Solution {
 
             if(num == 1){
                 count++;
-                countConsecutive = Math.max(count, countConsecutive);
+                
             }
             else{
+                if(count > countConsecutive){
+                    countConsecutive = count;
+                }
                 count=0;
             }
         }
-        return countConsecutive;
+        return Math.max(countConsecutive, count);
     }
 }
